@@ -1,0 +1,212 @@
+* {
+  outline: px solid rgba(255, 0, 0, 0.107);
+}
+
+.featured_events {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+@media screen and (min-width: 980px) {
+  .featured_events {
+    padding: 2%;
+    gap: 0;
+    flex-direction: row;
+    border: 1px solid var(--color-xlbeige);
+    background: #fcfcfb;
+    box-shadow: 4px 4px 0px 0px var(--color-xlbeige);
+  }
+}
+.featured_event {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--color-xlbeige);
+  flex-grow: 1;
+  gap: 24px;
+  padding-bottom: 24px;
+}
+@media screen and (min-width: 500px) {
+  .featured_event {
+    padding: 24px;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 499px) and (max-width: 979px) {
+  .featured_event {
+    border: 1px solid var(--color-xlbeige);
+    background: #fcfcfb;
+    box-shadow: 4px 4px 0px 0px var(--color-xlbeige);
+  }
+}
+@media screen and (min-width: 980px) {
+  .featured_event {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .featured_event:nth-child(1), .featured_event:nth-child(2), .featured_event:nth-child(3) {
+    border: 0;
+    padding: 0 16px;
+  }
+  .featured_event:nth-child(2), .featured_event:nth-child(3) {
+    border-left: 1px solid var(--color-xlbeige);
+  }
+  .featured_event:first-of-type {
+    padding-left: 0;
+  }
+  .featured_event:last-of-type {
+    padding-right: 0;
+  }
+}
+.featured_event header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+.featured_event_image {
+  background: var(--color-xlbeige);
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16/9;
+  border-radius: 2px;
+  position: relative;
+}
+@media screen and (min-width: 500px) {
+  .featured_event_image {
+    aspect-ratio: 4/3;
+  }
+}
+@media screen and (min-width: 980px) {
+  .featured_event_image {
+    aspect-ratio: 16/9;
+  }
+}
+.featured_event_image:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  border: 1px solid var(--color-white);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 0.25s;
+  opacity: 0;
+}
+.featured_event_image:hover:after {
+  transform: scale(0.925, 0.9);
+  opacity: 1;
+}
+.featured_event_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.featured_event_modality {
+  font-family: var(--font-circular);
+  border-radius: 4px;
+  background: var(--color-xlbeige);
+  font-size: 10px;
+  padding: 6px 16px;
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0;
+  order: 1;
+}
+.featured_event_title {
+  order: 1;
+  margin: 16px 0 0 0;
+  font-family: var(--font-circular);
+  font-size: 18px;
+  line-height: 1.25;
+  order: 0;
+}
+.featured_event_title a {
+  color: var(--color-brown);
+}
+.featured_event_title a:hover {
+  color: var(--color-red);
+}
+.featured_event_title a:active {
+  color: var(--color-black);
+}
+.featured_event section {
+  font-size: 14px;
+  color: var(--color-tgray);
+  flex: 1;
+}
+@media screen and (min-width: 500px) {
+  .featured_event section {
+    padding: 16px 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  .featured_event section {
+    padding: 0;
+  }
+}
+.featured_event section p:last-of-type {
+  margin-bottom: 0;
+}
+.featured_event_date {
+  font-family: var(--font-circular);
+  position: relative;
+  font-style: normal;
+  padding-left: 24px;
+}
+.featured_event_date:before {
+  content: url(https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/date.svg);
+  position: absolute;
+  left: 0px;
+}
+.featured_event_time {
+  font-family: var(--font-circular);
+  position: relative;
+  font-style: normal;
+  padding-left: 24px;
+}
+.featured_event_time:before {
+  content: url(https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/time.svg);
+  position: absolute;
+  left: 0px;
+}
+.featured_event_location {
+  font-family: var(--font-circular);
+  position: relative;
+  font-style: normal;
+  padding-left: 24px;
+}
+.featured_event_location:before {
+  content: url(https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/location.svg);
+  position: absolute;
+  left: 0px;
+}
+.featured_event_ticket {
+  font-family: var(--font-circular);
+  position: relative;
+  font-style: normal;
+  padding-left: 24px;
+}
+.featured_event_ticket:before {
+  content: url(https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/ticket.svg);
+  position: absolute;
+  left: 0px;
+}
+.featured_event_cost {
+  font-family: var(--font-circular);
+  position: relative;
+  font-style: normal;
+  padding-left: 24px;
+}
+.featured_event_cost:before {
+  content: url(https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/cost.svg);
+  position: absolute;
+  left: 0px;
+}/*# sourceMappingURL=style.css.map */
