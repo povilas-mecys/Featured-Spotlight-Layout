@@ -1,18 +1,15 @@
- * {
-     outline: px solid rgba(255, 0, 0, 0.107);
- }
+ 
 
  .featured {
      @mixin event_bg {
-         border: 1px solid var(--color-xlbeige);
-         background: lighten(#f8f7f5, 2%);
-         box-shadow: 4px 4px 0px 0px var(--color-xlbeige);
+        background: lighten( #eaeaea, 7);
+         box-shadow: 0 0 0 1px #eaeaea, 4px 4px 0 0 #eaeaea;
      }
      &_events {
          display: flex;
          flex-direction: column;
          justify-content: space-between;
-         gap: 40px;
+         gap: 24px;
          @media screen and (min-width: 980px) {
              padding: 24px 24px 24px 24px;
              gap: 0;
@@ -30,11 +27,19 @@
          @media screen and (min-width: 500px) {
              padding: 24px;
              flex-direction: row;
+             
+             &:nth-child(even){
+                flex-direction: row-reverse; 
+             }
          }
+ 
          @media screen and (min-width: 499px) and (max-width: 979px) {
              @include event_bg;
          }
          @media screen and (min-width: 980px) {
+            &:nth-child(even){
+                flex-direction: column; 
+             }
              flex-direction: column;
              align-items: normal;
              &:nth-child(1),
@@ -110,15 +115,16 @@
              display: inline-block;
              text-transform: uppercase;
              margin: 0;
-             order: 1;
+          
          }
          &_title {
              order: 1;
              margin: 16px 0 0 0;
              font-family: var(--font-circular);
              font-size: 18px;
-             line-height: 1.25;
-             order: 0;
+             font-weight: normal;
+             line-height: 1.5;
+            
              a {
                  color: var(--color-brown);
                  border-bottom: 1px solid var(--color-xlbeige);
