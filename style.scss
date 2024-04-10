@@ -1,29 +1,27 @@
  * {
-     outline:  px solid rgba(255, 0, 0, 0.107);
- }
+     outline: px solid rgba(255, 0, 0, 0.107);
+ }  
 
  .featured {
-
-    @mixin event_bg  {
-        border: 1px solid var(--color-xlbeige);
-        background: lighten(#f8f7f5, 2%);
-        box-shadow: 4px 4px 0px 0px var(--color-xlbeige);
+     @mixin event_bg {
+         border: 1px solid var(--color-xlbeige);
+         background: lighten(#f8f7f5, 2%);
+         box-shadow: 4px 4px 0px 0px var(--color-xlbeige);
      }
      &_events {
-        
          display: flex;
          flex-direction: column;
          justify-content: space-between;
-         gap: 24px;
-  
+         gap: 40px;
          @media screen and (min-width: 980px) {
-            padding: 2%;
+             padding: 24px 24px 40px 24px;
              gap: 0;
              flex-direction: row;
              @include event_bg;
          }
      }
 
+    
 
      &_event {
          display: flex;
@@ -31,15 +29,16 @@
          border-bottom: 1px solid var(--color-xlbeige);
          flex-grow: 1;
          gap: 24px;
-         padding-bottom: 24px;
+         padding-bottom: 40px;
+
+
+
          @media screen and (min-width: 500px) {
-          
-            padding: 24px;
-            flex-direction: row;
-            
+             padding: 24px;
+             flex-direction: row;
          }
          @media screen and (min-width: 499px) and (max-width: 979px) {
-            @include event_bg;
+             @include event_bg;
          }
          @media screen and (min-width: 980px) {
              flex-direction: column;
@@ -48,7 +47,7 @@
              &:nth-child(2),
              &:nth-child(3) {
                  border: 0;
-                 padding: 0 16px;
+                 padding: 8px 24px;
              }
              &:nth-child(2),
              &:nth-child(3) {
@@ -61,6 +60,7 @@
                  padding-right: 0;
              }
          }
+      
          header {
              display: flex;
              flex-direction: column;
@@ -76,10 +76,10 @@
              border-radius: 2px;
              position: relative;
              @media screen and (min-width: 500px) {
-                aspect-ratio: 4 / 3;
+                 aspect-ratio: 4 / 3;
              }
              @media screen and (min-width: 980px) {
-                aspect-ratio: 16 / 9;
+                 aspect-ratio: 16 / 9;
              }
              &:after {
                  content: "";
@@ -140,15 +140,14 @@
              font-size: 14px;
              color: var(--color-tgray);
              flex: 1;
-              
              @media screen and (min-width: 500px) {
-                padding: 16px 0;
+                 padding: 16px 0;
              }
              @media screen and (min-width: 980px) {
                  padding: 0;
              }
-             p:last-of-type{
-                margin-bottom: 0;
+             p:last-of-type {
+                 margin-bottom: 0;
              }
          }
          @mixin lw_icon($url) {

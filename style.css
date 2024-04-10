@@ -6,11 +6,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 24px;
+  gap: 40px;
 }
 @media screen and (min-width: 980px) {
   .featured_events {
-    padding: 2%;
+    padding: 24px 24px 40px 24px;
     gap: 0;
     flex-direction: row;
     border: 1px solid var(--color-xlbeige);
@@ -24,7 +24,7 @@
   border-bottom: 1px solid var(--color-xlbeige);
   flex-grow: 1;
   gap: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 40px;
 }
 @media screen and (min-width: 500px) {
   .featured_event {
@@ -46,7 +46,7 @@
   }
   .featured_event:nth-child(1), .featured_event:nth-child(2), .featured_event:nth-child(3) {
     border: 0;
-    padding: 0 16px;
+    padding: 8px 24px;
   }
   .featured_event:nth-child(2), .featured_event:nth-child(3) {
     border-left: 1px solid var(--color-xlbeige);
