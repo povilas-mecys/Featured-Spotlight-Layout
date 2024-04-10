@@ -1,6 +1,7 @@
+ 
  .featured {
      @mixin event_bg {
-         background: lighten( #eaeaea, 7);
+         background: lighten( #eaeaea, 6);
          box-shadow: 0 0 0 1px #eaeaea, 4px 4px 0 0 #eaeaea;
      }
      &_events {
