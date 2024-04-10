@@ -10,7 +10,7 @@
 }
 @media screen and (min-width: 980px) {
   .featured_events {
-    padding: 24px 24px 40px 24px;
+    padding: 24px 24px 24px 24px;
     gap: 0;
     flex-direction: row;
     border: 1px solid var(--color-xlbeige);
@@ -98,7 +98,7 @@
   opacity: 0;
 }
 .featured_event_image:hover:after {
-  transform: scale(0.925, 0.9);
+  transform: scale(0.96, 0.95);
   opacity: 1;
 }
 .featured_event_image img {
@@ -130,9 +130,11 @@
 }
 .featured_event_title a {
   color: var(--color-brown);
+  border-bottom: 1px solid var(--color-xlbeige);
 }
 .featured_event_title a:hover {
   color: var(--color-red);
+  border-bottom: 1px solid var(--color-lgray);
 }
 .featured_event_title a:active {
   color: var(--color-black);
@@ -144,7 +146,7 @@
 }
 @media screen and (min-width: 500px) {
   .featured_event section {
-    padding: 16px 0;
+    padding: 8px 0;
   }
 }
 @media screen and (min-width: 980px) {
@@ -209,4 +211,13 @@
   content: url(https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/cost.svg);
   position: absolute;
   left: 0px;
+}
+@media screen and (min-width: 500px) {
+  .featured_event:only-child {
+    gap: 24;
+    flex-direction: row;
+  }
+  .featured_event:only-child section {
+    padding: 8px 0;
+  }
 }/*# sourceMappingURL=style.css.map */

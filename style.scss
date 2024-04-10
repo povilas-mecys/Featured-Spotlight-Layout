@@ -1,6 +1,6 @@
  * {
      outline: px solid rgba(255, 0, 0, 0.107);
- }  
+ }
 
  .featured {
      @mixin event_bg {
@@ -14,15 +14,12 @@
          justify-content: space-between;
          gap: 40px;
          @media screen and (min-width: 980px) {
-             padding: 24px 24px 40px 24px;
+             padding: 24px 24px 24px 24px;
              gap: 0;
              flex-direction: row;
              @include event_bg;
          }
      }
-
-    
-
      &_event {
          display: flex;
          flex-direction: column;
@@ -30,9 +27,6 @@
          flex-grow: 1;
          gap: 24px;
          padding-bottom: 40px;
-
-
-
          @media screen and (min-width: 500px) {
              padding: 24px;
              flex-direction: row;
@@ -60,7 +54,6 @@
                  padding-right: 0;
              }
          }
-      
          header {
              display: flex;
              flex-direction: column;
@@ -97,7 +90,7 @@
              }
              &:hover {
                  &:after {
-                     transform: scale(0.925, 0.9);
+                     transform: scale(0.96, 0.95);
                      opacity: 1;
                  }
              }
@@ -128,8 +121,10 @@
              order: 0;
              a {
                  color: var(--color-brown);
+                 border-bottom: 1px solid var(--color-xlbeige);
                  &:hover {
                      color: var(--color-red);
+                     border-bottom: 1px solid var(--color-lgray);
                  }
                  &:active {
                      color: var(--color-black);
@@ -141,7 +136,7 @@
              color: var(--color-tgray);
              flex: 1;
              @media screen and (min-width: 500px) {
-                 padding: 16px 0;
+                 padding: 8px 0;
              }
              @media screen and (min-width: 980px) {
                  padding: 0;
@@ -175,6 +170,15 @@
          }
          &_cost {
              @include lw_icon('https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/cost.svg');
+         }
+         &:only-child {
+             @media screen and (min-width: 500px) {
+                 gap: 24;
+                 flex-direction: row;
+                 section {
+                     padding: 8px 0;
+                 }
+             }
          }
      }
  }
