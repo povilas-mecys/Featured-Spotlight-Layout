@@ -1,8 +1,6 @@
- 
-
  .featured {
      @mixin event_bg {
-        background: lighten( #eaeaea, 7);
+         background: lighten( #eaeaea, 7);
          box-shadow: 0 0 0 1px #eaeaea, 4px 4px 0 0 #eaeaea;
      }
      &_events {
@@ -27,18 +25,16 @@
          @media screen and (min-width: 500px) {
              padding: 24px;
              flex-direction: row;
-             
-             &:nth-child(even){
-                flex-direction: row-reverse; 
+             &:nth-child(even) {
+                 flex-direction: row-reverse;
              }
          }
- 
          @media screen and (min-width: 499px) and (max-width: 979px) {
              @include event_bg;
          }
          @media screen and (min-width: 980px) {
-            &:nth-child(even){
-                flex-direction: column; 
+             &:nth-child(even) {
+                 flex-direction: column;
              }
              flex-direction: column;
              align-items: normal;
@@ -115,7 +111,6 @@
              display: inline-block;
              text-transform: uppercase;
              margin: 0;
-          
          }
          &_title {
              order: 1;
@@ -124,7 +119,6 @@
              font-size: 18px;
              font-weight: normal;
              line-height: 1.5;
-            
              a {
                  color: var(--color-brown);
                  border-bottom: 1px solid var(--color-xlbeige);
